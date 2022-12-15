@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
         <nav className='w-full bg-[#1c2b36] flex px-10 h-[60px] sticky top-0'>
-          <span className='text-teal-600 flex flex-1 flex-row items-center text-2xl'>Blur<p className='m-0 text-white'>Admin</p> <MenuIcon className='ml-5 hover:text-yellow-400 cursor-pointer text-white'/> </span>
+          <span className='text-teal-600 flex flex-1 flex-row items-center text-2xl'>Blur<p className='m-0 text-white'>Admin</p> <MenuIcon  className='ml-5 hover:text-yellow-400 cursor-pointer text-white'/> </span>
         </nav>
         <div className="flex">
         <Sidebar/>
