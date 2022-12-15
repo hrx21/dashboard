@@ -7,9 +7,13 @@ import TableViewIcon from '@mui/icons-material/TableView';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import DescriptionIcon from '@mui/icons-material/Description';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import  Link  from 'react-router-dom';
+import  {Link}  from 'react-router-dom';
+import {useState} from 'react'
 
 const Sidebar = () => {
+
+
+  const [size, setSize] = useState(13);
 
   const items = [
     {
@@ -25,49 +29,51 @@ const Sidebar = () => {
     {
       title: 'Charts',
       icon: <BarChartIcon/>,
-      link: ''
+      link: '/pages/chart'
     },
     {
       title: 'UI Features',
       icon: <LaptopMacIcon/>,
-      link: ''
+      link: '/pages/feature'
     },
     {
       title: 'Form Elements',
       icon: <NoteAltIcon/>,
-      link: ''
+      link: '/pages/form'
     },
     {
       title: 'Tables',
       icon: <TableViewIcon/>,
-      link: ''
+      link: '/pages/table'
     },
     {
       title: 'Maps',
       icon: <LocationOnIcon/>,
-      link: ''
+      link: '/pages/map'
     },
     {
       title: 'Pages',
       icon: <DescriptionIcon/>,
-      link: ''
+      link: '/pages/page'
     },
     {
       title: 'Menu Level 1',
       icon: <MoreHorizIcon/>,
-      link: ''
+      link: '/pages/menu'
     },
   ]
 
   return ( 
-    <div className="bg-[#1c2b36] w-[13%] flex items-start text-xs h-screen">
-         <div className='flex pt-16 flex-col'>
+    
+    <div className={`bg-[#1c2b36] w-[${size}%] flex items-start text-xs h-screen m-0`}>
+         <div className='flex flex-col'>
          {items.map((ind)=> {
-          return <div className='flex cursor-pointer py-2 text-white'>
+          return <Link to={ind.link} className='flex cursor-pointer py-2 text-white'>
           <p className='px-4 text-xs'>{ind.icon}</p>
           {ind.title}
-        </div>
-      })}   
+        </Link>
+      })}  
+      <button onClick={()=>setSize(2)}>ffff</button> 
    </div>
 
     </div>
