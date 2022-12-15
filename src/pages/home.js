@@ -1,7 +1,7 @@
 const Home = () => {
     return ( 
         <div className='flex justify-center items-center'>
-            <h1>Dashboard</h1>
+            <img src="/homepage.png" className="h-full w-full"/>
         </div>
      );
 }
